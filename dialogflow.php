@@ -21,7 +21,7 @@ namespace Google\Cloud\Samples\Dialogflow;
 use Google\Cloud\Dialogflow\V2\SessionsClient;
 use Google\Cloud\Dialogflow\V2\TextInput;
 use Google\Cloud\Dialogflow\V2\QueryInput;
-use Symfony\Component\Dotenv\Dotenv;
+// use Symfony\Component\Dotenv\Dotenv;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -30,13 +30,12 @@ header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-
+/*
 // Load env vars from .env
 if (class_exists('\Symfony\Component\Dotenv\Dotenv')) {
     $dotenv = new \Symfony\Component\Dotenv\Dotenv();
     if (is_readable(__DIR__.'/.env')) $dotenv->load(__DIR__.'/.env');
 }
-
 
 // Save Google Account Credentials json file as 'service-account-file.json'
 //make sure that Google Account Credentials JSON file and this file are in same directory.
@@ -52,7 +51,9 @@ if (getenv('PROJECT_ID') != "[PROJECT_ID]") {
     $projectId        = getenv('PROJECT_ID');
 }
 
-
+*/
+$google_application_credentials = "service-account-file.json";
+$projectId = "sumith-rwup";
 
 $data = json_decode(file_get_contents("php://input"));
 
